@@ -1,44 +1,24 @@
-import { useEffect, useState } from 'react';
-import uniquid from 'uniquid';
+import React, { useEffect, useState } from 'react';
 
 import Card from './Card.js';
 
 import style from './../styles/CardPane.module.css';
 
-function importImages() {
-	const importAll = (r) => {
-		const images = [];
-		r.keys().map(
-			(item, index) =>
-				(images[item.replace('./', '').replace('.jpg', '')] = r(item))
-		);
-		return images;
-	};
-
-	const images = importAll(
-		require.context('./../images/BirdPhotos', false, /\.(png|jpe?g|svg)$/)
-	);
-	return images;
-}
-
 export default function CardPane(props) {
-	const [cardCount, setCardCount] = useState(props.cardCount);
+	const [cards, setCards] = useState([]);
 
-	const images = importImages();
-	console.log(images);
-	//set card count:
 	useEffect(() => {
-		if (props.cardCount !== { cardCount }) {
-			setCardCount(props.cardCount);
+		if (cards !== props.cards) {
+			setCards(props.cards);
 		}
-	}, [props.cardCount, cardCount]);
+	}, [props.cards, cards]);
 
 	return (
 		<div>
 			<p>Card Count: {props.cardCount}</p>
 			<div className={style.cardPane}>
-				{[...Array(props.cardCount)].map((x, i) => (
-					<Card key={uniquid()} photo={images.cockatoo} alt='cockatoo' />
+				{[...cards].map((x) => (
+					<Card photo={x.src} increaseScore={props.increaseScore} />
 				))}
 			</div>
 		</div>

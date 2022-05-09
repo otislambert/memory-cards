@@ -15,10 +15,9 @@ export default function CardPane(props) {
 
 	return (
 		<div>
-			<p>Card Count: {props.cardCount}</p>
 			<div className={style.cardPane}>
-				{[...cards].map((x) => (
-					<Card photo={x.src} increaseScore={props.increaseScore} />
+				{[...cards].map((card) => (
+					<Card key={card.id} card={card} cardClick={props.cardClick} />
 				))}
 			</div>
 		</div>

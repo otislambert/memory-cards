@@ -26,6 +26,14 @@ const allImages = [
 	egret,
 ];
 
+const allCards = allImages.map((x, i) => {
+	return {
+		src: x,
+		clicked: false,
+		id: i,
+	};
+});
+
 function shuffle(array) {
 	let currentIndex = array.length,
 		randomIndex;
@@ -44,16 +52,9 @@ function shuffle(array) {
 }
 
 export default function App() {
-	const [cards] = useState(
-		allImages.map((x) => {
-			return {
-				src: x,
-				clicked: false,
-				id: uniquid(),
-			};
-		})
-	);
+	const [cards, setCards] = useState(allCards);
 	const [score, setScore] = useState(0);
+	const [highScore, setHighScore] = useState(0);
 	const [cardCount, setCardCount] = useState(4);
 	const [cardsInstance, setCardsInstance] = useState([]);
 
@@ -64,17 +65,43 @@ export default function App() {
 		setCardsInstance(shuffle(cards).slice(0, cardCount));
 	}, [score, cardCount, cards]);
 
+	function handleCardClick(e) {
+		const key = parseInt(e.currentTarget.dataset.key);
+		const clickedCard = cards.find((card) => {
+			return card.id === key;
+		});
+		if (clickedCard.clicked) {
+			resetGame();
+		} else {
+			clickedCard.clicked = true;
+			increaseScore();
+		}
+	}
+
 	function increaseScore() {
 		setScore(score + 1);
+	}
+
+	function resetGame() {
+		if (score > highScore) {
+			setHighScore(score);
+		}
+		setScore(0);
+		setCards(
+			allCards.map((card) => {
+				card.clicked = false;
+				return card;
+			})
+		);
 	}
 
 	return (
 		<div>
 			<header>
-				<Scoreboard score={score} />
+				<Scoreboard score={score} highScore={highScore} />
 			</header>
 			<main>
-				<CardPane increaseScore={increaseScore} cards={cardsInstance} />
+				<CardPane cardClick={handleCardClick} cards={cardsInstance} />
 			</main>
 		</div>
 	);

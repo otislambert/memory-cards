@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/otislambert.gihub.io/memory-cards/static/css/main.cb60955a.css",
-    "main.js": "/otislambert.gihub.io/memory-cards/static/js/main.c5f96a05.js",
-    "static/js/787.efc4d965.chunk.js": "/otislambert.gihub.io/memory-cards/static/js/787.efc4d965.chunk.js",
-    "static/media/northern_flicker.jpg": "/otislambert.gihub.io/memory-cards/static/media/northern_flicker.a91f00c9d81d5929a98b.jpg",
-    "static/media/cockatoo.jpg": "/otislambert.gihub.io/memory-cards/static/media/cockatoo.01237e141a4675eca987.jpg",
-    "static/media/macaw.jpg": "/otislambert.gihub.io/memory-cards/static/media/macaw.004326a47653458f3905.jpg",
-    "static/media/great_horned_owl.jpg": "/otislambert.gihub.io/memory-cards/static/media/great_horned_owl.b7dd6f79d5a981a5f2f5.jpg",
-    "static/media/lesser_bird_of_paradise.jpg": "/otislambert.gihub.io/memory-cards/static/media/lesser_bird_of_paradise.1c03fa062f35a65a0ba6.jpg",
-    "static/media/yellow_billed_egret.jpg": "/otislambert.gihub.io/memory-cards/static/media/yellow_billed_egret.fef93bb16cb7dbd001a8.jpg",
-    "static/media/double_collard_sunbird.jpg": "/otislambert.gihub.io/memory-cards/static/media/double_collard_sunbird.222d25278092f5c24d63.jpg",
-    "static/media/swallow.jpg": "/otislambert.gihub.io/memory-cards/static/media/swallow.5f9ee4a5e9c1e3d810fd.jpg",
-    "index.html": "/otislambert.gihub.io/memory-cards/index.html",
-    "main.cb60955a.css.map": "/otislambert.gihub.io/memory-cards/static/css/main.cb60955a.css.map",
-    "main.c5f96a05.js.map": "/otislambert.gihub.io/memory-cards/static/js/main.c5f96a05.js.map",
-    "787.efc4d965.chunk.js.map": "/otislambert.gihub.io/memory-cards/static/js/787.efc4d965.chunk.js.map"
+    "main.css": "/memory-cards/static/css/main.cb60955a.css",
+    "main.js": "/memory-cards/static/js/main.4fa082de.js",
+    "static/js/787.efc4d965.chunk.js": "/memory-cards/static/js/787.efc4d965.chunk.js",
+    "static/media/northern_flicker.jpg": "/memory-cards/static/media/northern_flicker.a91f00c9d81d5929a98b.jpg",
+    "static/media/cockatoo.jpg": "/memory-cards/static/media/cockatoo.01237e141a4675eca987.jpg",
+    "static/media/macaw.jpg": "/memory-cards/static/media/macaw.004326a47653458f3905.jpg",
+    "static/media/great_horned_owl.jpg": "/memory-cards/static/media/great_horned_owl.b7dd6f79d5a981a5f2f5.jpg",
+    "static/media/lesser_bird_of_paradise.jpg": "/memory-cards/static/media/lesser_bird_of_paradise.1c03fa062f35a65a0ba6.jpg",
+    "static/media/yellow_billed_egret.jpg": "/memory-cards/static/media/yellow_billed_egret.fef93bb16cb7dbd001a8.jpg",
+    "static/media/double_collard_sunbird.jpg": "/memory-cards/static/media/double_collard_sunbird.222d25278092f5c24d63.jpg",
+    "static/media/swallow.jpg": "/memory-cards/static/media/swallow.5f9ee4a5e9c1e3d810fd.jpg",
+    "index.html": "/memory-cards/index.html",
+    "main.cb60955a.css.map": "/memory-cards/static/css/main.cb60955a.css.map",
+    "main.4fa082de.js.map": "/memory-cards/static/js/main.4fa082de.js.map",
+    "787.efc4d965.chunk.js.map": "/memory-cards/static/js/787.efc4d965.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb60955a.css",
-    "static/js/main.c5f96a05.js"
+    "static/js/main.4fa082de.js"
   ]
 }
